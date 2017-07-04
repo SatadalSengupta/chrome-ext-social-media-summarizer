@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Social Media Summarizer",
+  "version": "0.1.0",
+  "description": "Summarizes online social media information from Facebook and Twitter for idle user",
+  "browser_action": {"default_icon": "logo.png"},
+  "permissions": ["activeTab","http://10.5.20.246:44401/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+   "js": ["jquery.min.js","content.js"],
+    "matches": ["https://www.facebook.com/*"]
+  }],
+  "web_accessible_resources": ["script.js"]
+}
